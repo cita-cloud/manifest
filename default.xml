@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="github" fetch="ssh://git@github.com" />
+
+        <default remote="github" />
+
+        <project name="cita-cloud/controller" revision="master" />
+        <project name="cita-cloud/network_zenoh" revision="main" />
+        <project name="cita-cloud/consensus_overlord" revision="main" />
+        <project name="cita-cloud/consensus_raft" revision="master" />
+        <project name="cita-cloud/storage_rocksdb" revision="main" />
+        <project name="cita-cloud/crypto_sm" revision="main" />
+        <project name="cita-cloud/crypto_eth" revision="master" />
+        <project name="cita-cloud/executor_evm" revision="master" />
+        <project name="cita-cloud/cloud-config" revision="master" />
+</manifest>
