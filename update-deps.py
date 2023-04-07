@@ -23,6 +23,12 @@ if __name__ == '__main__':
     # print(project)
 
     try:
+        if project['package']['version']:
+            project['package']['version'] = proto_version
+    except (KeyError):
+        pass
+
+    try:
         if project['dependencies']['cloud-util']:
             project['dependencies']['cloud-util'] = "=" + util_version
     except (KeyError):
@@ -43,6 +49,12 @@ if __name__ == '__main__':
     try:
         if project['dependencies']['crypto_eth']:
             project['dependencies']['crypto_eth']["branch"] = "v" + proto_version
+    except (KeyError):
+        pass
+
+    try:
+        if project['dependencies']['zenoh']:
+            project['dependencies']['zenoh']["tag"] = "v" + proto_version
     except (KeyError):
         pass
 
