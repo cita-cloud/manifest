@@ -13,7 +13,7 @@ export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo'
 ```
 
 ## release
-For example, release version is `6.6.5-beta1`.
+For example, release version is `6.6.5`.
 
 ### repo init
 ```bash
@@ -22,13 +22,13 @@ repo sync
 ```
 
 ### tag cita_cloud_proto
-Create a tag `6.6.5-beta1` for repo cita_cloud_proto.
+Create a tag `6.6.5` for repo cita_cloud_proto.
 
 ### publish cloud-common-rs
 
-Create a branch `v6.6.5-beta1` for repo cloud-common-rs.
+Create a branch `v6.6.5` for repo cloud-common-rs.
 
-Publish creates cloud-util `0.6.2-beta1` and cita_cloud_proto `6.6.5-beta1`.
+Publish creates cloud-util `0.6.2` and cita_cloud_proto `6.6.5`.
 
 ### release micro services
 
@@ -39,14 +39,14 @@ pip install rtoml
 ```
 
 ```bash
-repo start v6.6.5-beta1 --all
-export PROTO_VERSION=6.6.5-beta1
-export UTIL_VERSION=0.6.2-beta1
+repo start v6.6.5 --all
+export PROTO_VERSION=6.6.5
+export UTIL_VERSION=0.6.2
 # copy update-deps.py to current dir
 repo forall -p -v -c python3 `pwd`/update-deps.py
 
 repo forall -p -v -c git add .
-repo forall -p -v -c git commit -m "release v6.6.5-beta1"
+repo forall -p -v -c git commit -m "release v6.6.5"
 
 repo forall -p -v -c git push origin HEAD
 ```
