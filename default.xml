@@ -8,9 +8,7 @@
         <project name="network_zenoh" revision="main" />
         <project name="consensus_overlord" revision="main" />
         <project name="consensus_raft" revision="master" />
-        <project name="storage_rocksdb" revision="main" />
-        <project name="crypto_sm" revision="main" />
-        <project name="crypto_eth" revision="master" />
+        <project name="storage_opendal" revision="main" />
         <project name="executor_evm" revision="master" />
 
         <project name="cloud-config" revision="master" />
