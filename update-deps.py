@@ -52,11 +52,5 @@ if __name__ == '__main__':
     except (KeyError):
         pass
 
-    try:
-        if project['dependencies']['zenoh']:
-            project['dependencies']['zenoh']["tag"] = "v" + proto_version
-    except (KeyError):
-        pass
-
     
     rtoml.dump(project, cargo_path, pretty=True)
